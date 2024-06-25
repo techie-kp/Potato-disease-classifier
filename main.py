@@ -11,7 +11,7 @@ def read_file_as_image(data) -> np.ndarray:
 
 #Tensorflow Model Prediction
 def model_prediction(test_image):
-    MODEL = tf.keras.models.load_model("C:/Users/kap23/OneDrive/Desktop/potato-disease/saved_models/model.keras")
+    MODEL = tf.keras.models.load_model("saved_models/model.keras")
     
     image = tf.keras.preprocessing.image.load_img(test_image,target_size=(256,256))
     input_arr = tf.keras.preprocessing.image.img_to_array(image)
